@@ -1,0 +1,5 @@
+$apis = @{ 	Accounting = "accounting"	Ats = "ats"	Connector = "connector"	Crm = "crm"	CustomerSupport = "customer-support"	FileStorage = "file-storage"	Hris = "hris"	Leads = "lead"	Pos = "pos"	Proxy = "proxy"	Sms = "sms"	Vault = "vault"	Webhook = "webhook" }foreach($h in $apis.GetEnumerator()){	docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate -i https://raw.githubusercontent.com/apideck-libraries/openapi-specs/master/$($h.Value).yml -g csharp-netcore  -o /local/out/ --additional-properties=packageName=Apideck.$($h.Name)	# --additional-properties=library=httpclient		If ((Test-Path ./docs/$($h.Name)))	{		remove-item ./docs/$($h.Name) -recurse -force	}	If ((Test-Path ./src/Apideck.$($h.Name)))
+	{
+		remove-item ./src/Apideck.$($h.Name) -recurse -force
+	}
+	New-Item ./docs/$($h.Name) -ItemType Directory -Force	New-Item ./src/Apideck.$($h.Name) -ItemType Directory -Force	get-childitem -Path ./out/docs/ | move-item -destination ./docs/$($h.Name) -force	get-childitem -Path ./out/src/Apideck.$($h.Name) | move-item -destination ./src/Apideck.$($h.Name) -force}

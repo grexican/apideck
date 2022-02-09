@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ILMerge" Version="3.0.29" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Apideck.Accounting\Apideck.Accounting.csproj" />
+    <ProjectReference Include="..\Apideck.Ats\Apideck.Ats.csproj" />
+    <ProjectReference Include="..\Apideck.Connector\Apideck.Connector.csproj" />
+    <ProjectReference Include="..\Apideck.Crm\Apideck.Crm.csproj" />
+    <ProjectReference Include="..\Apideck.CustomerSupport\Apideck.CustomerSupport.csproj" />
+    <ProjectReference Include="..\Apideck.FileStorage\Apideck.FileStorage.csproj" />
+    <ProjectReference Include="..\Apideck.Hris\Apideck.Hris.csproj" />
+    <ProjectReference Include="..\Apideck.Leads\Apideck.Leads.csproj" />
+    <ProjectReference Include="..\Apideck.Pos\Apideck.Pos.csproj" />
+    <ProjectReference Include="..\Apideck.Proxy\Apideck.Proxy.csproj" />
+    <ProjectReference Include="..\Apideck.Sms\Apideck.Sms.csproj" />
+    <ProjectReference Include="..\Apideck.Vault\Apideck.Vault.csproj" />
+    <ProjectReference Include="..\Apideck.Webhook\Apideck.Webhook.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Apideck</id>
+    <version>1.0.0</version>
+    <description>Models and clients for Apideck. Generated from Apideck's openapi specs</description>
+    <authors>Eli Gassert</authors>
+
+  </metadata>
+
+  <files>
+      <file src=".\bin\Release\netstandard2.0\ApiDeck.*.dll" />
+  </files>
+</package>
