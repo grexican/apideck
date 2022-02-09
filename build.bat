@@ -1,3 +1,3 @@
 dotnet build src/Apideck.sln  --configuration Release
-
-nuget pack src/apideck/apideck.nuspec -OutputDirectory ./dist
+dotnet pack -c Release ./src/Apideck -o ./dist -p:NuspecFile=apideck.nuspec
+
